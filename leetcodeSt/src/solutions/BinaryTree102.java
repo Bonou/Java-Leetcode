@@ -28,7 +28,7 @@ public class BinaryTree102 {
 	                TreeNode tempNode = que.poll();
 	                itemList.add(tempNode.val);
 
-	                //ÅÐ¶Ïµ±Ç°½áµãÊÇ·ñÓÐ×óÓÒ×Ó½áµã£¬ÓÐµÄ»°£¬°´×óÓÒË³Ðò¼ÓÈë¸¨Öú¶ÓÁÐ
+	                //ï¿½Ð¶Ïµï¿½Ç°ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó½ï¿½ã£¬ï¿½ÐµÄ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ë¸¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	                if(tempNode.left != null){
 	                    que.offer(tempNode.left);
 	                }
@@ -37,7 +37,7 @@ public class BinaryTree102 {
 	                }
 	                len--;
 	            }
-	            resList.add(itemList);      //½«µ±Ç°²ãµÄ½áµã´æÈëresListÖÐ
+	            resList.add(itemList);      //ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½Ä½ï¿½ï¿½ï¿½ï¿½ï¿½resListï¿½ï¿½
 	        }
 
 	    }
