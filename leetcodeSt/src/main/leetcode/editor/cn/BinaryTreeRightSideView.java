@@ -62,10 +62,10 @@
 class Solution {
     /**
      * 解法：队列，迭代。
-     * 层序遍历，只返回右结点
+     * 层序遍历，只返回每一层的最后一个字段
      */
     public List<Integer> rightSideView(TreeNode root) {
-        List<Integer> result = new ArrayListList<>();
+        List<Integer> result = new ArrayList<>();
         Deque<TreeNode> que = new LinkedList<>();
 
         if(root == null){
@@ -74,15 +74,25 @@ class Solution {
 
         que.offer(root);
         while(!que.isEmpty()){
-            int levelSize = que.size;
+            int levelSize = que.size();
 
             for(int i = 0; i < levelSize; i++){
                 TreeNode poll = que.pollFirst();
 
-                
+                if(poll.left != null){
+                    que.offer(poll.left);
+                }
+                if(poll.right != null){
+                    que.offer(poll.right);
+                }
+
+                // 判断是否遍历到单层的最后面的元素，如果是，就放进result数组中
+                if(i == levelSize - 1){
+                    result.add(poll.val);
+                }
             }
         }
-        return list;
+        return result;
 
     }
 }
