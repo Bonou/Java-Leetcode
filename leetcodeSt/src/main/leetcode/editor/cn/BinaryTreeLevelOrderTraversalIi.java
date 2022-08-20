@@ -76,15 +76,15 @@ class Solution {
 
             int levelSize = que.size();
             for(int i = 0; i< levelSize; i++){
-                TreeNode peek = que.peekFirst();
-                levelList.add(que.pollFirst().val);
+                TreeNode peek = que.peek();
+                levelList.add(que.poll().val);
 
                 //左右叶子节点
                 if(peek.left != null){
-                    que.offerLast(peek.left);
+                    que.offer(peek.left);
                 }
                 if(peek.right != null){
-                    que.offerLast(peek.right);
+                    que.offer(peek.right);
                 }
             }
             list.add(levelList);
