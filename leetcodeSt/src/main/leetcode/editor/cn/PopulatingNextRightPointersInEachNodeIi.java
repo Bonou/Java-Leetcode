@@ -81,7 +81,37 @@ class Node {
 
 class Solution {
     public Node connect(Node root) {
-        // 这题与116的区别在于，117是非完全二叉树
+        // 这题与116的区别在于，117是非完全二叉树。但是解题代码是一样的
+        Deque<Node> que = new LinkedList<>();
+
+        if(root == null){
+            return root;
+        }
+
+        que.offer(root);
+        while(!que.isEmpty()){
+            int levelSize = que.size();
+
+            for(int i = 0; i < levelSize; i++){
+                Node node = que.poll();
+
+                // 连接，next指向右侧结点
+                if(i < levelSize - 1){
+                    node.next = que.peek();
+                }else{
+                    node.next = null;
+                }
+
+                if(node.left !=  null){
+                    que.offer(node.left);
+                }
+                if(node.right != null){
+                    que.offer(node.right);
+                }
+            }
+        }
+        return root;
+
 
     }
 }
