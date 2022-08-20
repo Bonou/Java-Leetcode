@@ -88,7 +88,6 @@ class Node {
 
 class Solution {
     public Node connect(Node root) {
-//        List<Integer> list = new ArrayList<>();
         Deque<Node> que = new LinkedList<>();
 
         if(root == null){
