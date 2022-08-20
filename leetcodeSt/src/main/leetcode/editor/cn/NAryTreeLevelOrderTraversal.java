@@ -64,29 +64,29 @@ class Solution {
     public List<List<Integer>> levelOrder(Node root) {
         // 借助队列
         List<List<Integer>> list = new ArrayList<>();
-        Deque<TreeNode> que = new LinkedList<>();
+        Deque<Node> que = new LinkedList<>();
 
         if(root == null){
             return list;
         }
 
-        que.offerLast(root);    // 根节点先入队
+        que.offer(root);    // 根节点先入队
         while(!que.isEmpty()){
             int levelSize = que.size();
             List<Integer> levelList = new ArrayList<>();
 
             for(int i = 0; i < levelSize; i++){
-                Node poll = que.pollFirst();
+                Node poll = que.poll();
 
-                levelList.offer(poll.val);
+                levelList.add(poll.val);
 
-                List<Node> children = poll.childern;
+                List<Node> children = poll.children;
                 if(children == null || children.size() == 0){
                     continue;
                 }
                 for(Node child : children){
                     if(child != null){
-                        que.offerLast(child);
+                        que.offer(child);
                     }
                 }
             }
