@@ -57,7 +57,6 @@
 class Solution {
 
     /**
-     *
      * @param root
      * 先层序遍历，令max的初值为integer中最小值，即Integer.MIN_VALUE,然后将每一层中的结点数与max比较，取最大值
      * @return
