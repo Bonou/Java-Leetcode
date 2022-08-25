@@ -1,0 +1,98 @@
+## 前言
+
+今天是我们讲解**动态规划专题**中的 *[路径问题](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU4NDE3MTEyMA==&action=getalbum&album_id=1773144264147812354&scene=173&from_msgid=2247485319&from_itemidx=1&count=3#wechat_redirect)* 的第二天。
+
+今天讲解的题目主要是为了巩固 *[上一讲](https://mp.weixin.qq.com/s?__biz=MzU4NDE3MTEyMA==&mid=2247485037&idx=1&sn=d6d52c48600e655161e84f25d3402514&chksm=fd9cad72caeb2464e1d8adcd991ec178001472a6c6ddc02a1764bc74ea27a97f71fddbce9975&token=1829651322&lang=zh_CN#rd)* 我和你分享的 DP 分析技巧。
+
+另外，我在文章结尾处列举了我所整理的关于 *路径问题* 的相关题目。
+
+*路径问题* 我按照编排好的顺序进行讲解（一天一道）。
+
+你也先可以尝试做做，也欢迎你向我留言补充，你觉得与路径相关的 DP 类型题目 ~
+
+***
+
+## 动态规划解法
+
+这道题和 [62. 不同路径](https://mp.weixin.qq.com/s?__biz=MzU4NDE3MTEyMA==&mid=2247485037&idx=1&sn=d6d52c48600e655161e84f25d3402514&chksm=fd9cad72caeb2464e1d8adcd991ec178001472a6c6ddc02a1764bc74ea27a97f71fddbce9975&token=1829651322&lang=zh_CN#rd) 相比，不能说完全相同，只能说一模一样 ~
+
+多了某些格子有障碍物（不可达）的限制，但丝毫不影响我们的分析。
+
+还是定义 `f[i][j]` 为到达位置 `(i,j)` 的不同路径数量。
+
+那么 `f[n-1][m-1]` 就是我们最终的答案。
+
+`f[0][0] = 1` 是一个显而易见的起始条件，同时由于某些格子上有障碍物，对于 `grid[i][j]==1` 的格子，则有 `f[i][j] = 0`。
+
+由于题目限定了我们只能 *往下* 或者 *往右* 移动，因此我们按照**当前可选方向**进行分析：
+
+1. 当前位置只能 **往下** 移动，即有 `f[i][j] = f[i-1][j]`
+
+2. 当前位置只能 **往右** 移动，即有 `f[i][j] = f[i][j-1]`
+
+3. 当前位置即能 **往下** 也能 **往右** 移动，即有 `f[i][j] = f[i][j-1] + f[i-1][j]`
+
+代码：
+
+* Java
+
+```Java
+class Solution {
+    public int uniquePathsWithObstacles(int[][] grid) {
+        int m = grid.length, n = grid[0].length;
+        int[][] f = new int[m][n];
+        f[0][0] = grid[0][0] == 1 ? 0 : 1;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (grid[i][j] != 1) {
+                    if (i > 0 && j > 0) {
+                        f[i][j] = f[i - 1][j] + f[i][j - 1];
+                    } else if (i > 0) {
+                        f[i][j] = f[i - 1][j];
+                    } else if (j > 0) {
+                        f[i][j] = f[i][j - 1];
+                    }
+                }
+            }
+        }
+        return f[m - 1][n - 1];
+    }
+}
+```
+
+* 时间复杂度：$O(n*m)$
+* 空间复杂度：$O(n*m)$
+
+***
+
+## 路径问题（目录）
+
+62.不同路径（中等）：[路径问题第一讲](https://mp.weixin.qq.com/s/G_KYdjrhQQO43-t0Jw8iBA)
+
+63.不同路径 II（中等）：[路径问题第二讲](https://mp.weixin.qq.com/s/YsBmrdeOXlsjOJGyNnDg4A)
+
+64.最小路径和（中等）：[路径问题第三讲](https://mp.weixin.qq.com/s/ud-eVofLnYAwNrWwyhEFhA)
+
+120.三角形最小路径和（中等）：[路径问题第四讲](https://mp.weixin.qq.com/s/o0e7EbMyDUle1DXgHLsG8A)
+
+931.下降路径最小和（中等）：[路径问题第五讲](https://mp.weixin.qq.com/s?__biz=MzU4NDE3MTEyMA==&mid=2247485163&idx=1&sn=ffe456777bcda52c036e6eb2181d1932&chksm=fd9cadf4caeb24e21a57ce47295a54ee9d591dfbb857549a57c145cdeeabf8c4324b007fc18b&token=1459317048&lang=zh_CN#rd)
+
+1289.下降路径最小和 II（困难）：[路径问题第六讲](https://mp.weixin.qq.com/s?__biz=MzU4NDE3MTEyMA==&mid=2247485187&idx=1&sn=a07f67501aa696a79b1e85bb2860c0b2&chksm=fd9cac1ccaeb250a777f9334c0cd3bb0135dafa0007d6d0bbb5cf38e484773d3539fd776b2ea&token=1459317048&lang=zh_CN#rd)
+
+1575.统计所有可行路径（困难）：[路径问题第七讲](https://mp.weixin.qq.com/s?__biz=MzU4NDE3MTEyMA==&mid=2247485297&idx=1&sn=5ee4ce31c42d368af0653f60aa263c82&chksm=fd9cac6ecaeb25787e6da90423c5467e1679da0a8aaf1a3445475199a8f148d8629e851fea57&token=1459317048&lang=zh_CN#rd)（记忆化搜索）
+
+1575.统计所有可行路径（困难）：[路径问题第八讲](https://mp.weixin.qq.com/s?__biz=MzU4NDE3MTEyMA==&mid=2247485319&idx=1&sn=95a3dc9c97ca57185de792ca70924afe&chksm=fd9cac98caeb258ebea466f59378670a90af1cb3015ae70922e1d04ac711a5b8d8d853ac5e7d&token=677741617&lang=zh_CN#rd)（动态规划）
+
+576.出界的路径数（中等）：[路径问题第九讲](https://mp.weixin.qq.com/s?__biz=MzU4NDE3MTEyMA==&mid=2247485426&idx=1&sn=071aec0bf5bc2e20c58f4cbb3dcb0fbc&chksm=fd9cacedcaeb25fb895cb99963dcfcde6b10268893a085eed4000b48bf070cecbdf7c81bf991&token=1934509949&lang=zh_CN#rd)
+
+1301.最大得分的路径数目（困难）：[路径问题第十讲](https://mp.weixin.qq.com/s/GpjnngbLVO-mdQjz53Wy9w)
+
+欢迎补充 ~
+
+***
+
+## 最后
+
+如果有帮助到你，请给个点赞关注，让更多的人看到 ~ ("▔□▔)/
+
+也欢迎你 [关注我](https://oscimg.oschina.net/oscnet/up-19688dc1af05cf8bdea43b2a863038ab9e5.png) 和 加入我们的[「组队打卡」](https://leetcode-cn.com/u/ac_oier/)小群 ，提供写「证明」&「思路」的高质量题解
