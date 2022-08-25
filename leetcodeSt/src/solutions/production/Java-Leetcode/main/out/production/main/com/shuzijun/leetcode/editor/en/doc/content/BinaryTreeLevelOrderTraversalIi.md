@@ -1,4 +1,4 @@
-<p>给你二叉树的根节点 <code>root</code> ，返回其节点值的 <strong>层序遍历</strong> 。 （即逐层地，从左到右访问所有节点）。</p>
+<p>给你二叉树的根节点 <code>root</code> ，返回其节点值 <strong>自底向上的层序遍历</strong> 。 （即按从叶子节点所在层到根节点所在的层，逐层从左向右遍历）</p>
 
 <p>&nbsp;</p>
 
@@ -6,7 +6,7 @@
 <img alt="" src="https://assets.leetcode.com/uploads/2021/02/19/tree1.jpg" style="width: 277px; height: 302px;" /> 
 <pre>
 <strong>输入：</strong>root = [3,9,20,null,null,15,7]
-<strong>输出：</strong>[[3],[9,20],[15,7]]
+<strong>输出：</strong>[[15,7],[9,20],[3]]
 </pre>
 
 <p><strong>示例 2：</strong></p>
@@ -32,4 +32,4 @@
  <li><code>-1000 &lt;= Node.val &lt;= 1000</code></li> 
 </ul>
 
-<div><div>Related Topics</div><div><li>树</li><li>广度优先搜索</li><li>二叉树</li></div></div><br><div><li>👍 1428</li><li>👎 0</li></div>
+<div><div>Related Topics</div><div><li>树</li><li>广度优先搜索</li><li>二叉树</li></div></div><br><div><li>👍 608</li><li>👎 0</li></div>
