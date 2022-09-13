@@ -91,6 +91,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/P376_WiggleSubsequence.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/doc/content/P376_WiggleSubsequence.md" />
+              <option name="frontendQuestionId" value="leetcode.cn376" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/P376_WiggleSubsequence.java" />
+              <option name="titleSlug" value="wiggle-subsequence" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/P455_AssignCookies.java">
           <value>
             <LeetcodeEditor>
