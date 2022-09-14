@@ -52,6 +52,7 @@ public class P122BestTimeToBuyAndSellStockIi{
     //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int maxProfit(int[] prices) {
+        // 贪心算法
         // 这题与摆动序列类似
         int sum = 0;
         for(int i = 1; i < prices.length; i++){
@@ -60,6 +61,13 @@ class Solution {
 
         }
         return sum;
+
+//        // 动态规划
+//        // [天数][是否持有股票]
+//        int[][] dp = new int[prices.length][2];
+//
+//        dp[0][0] = 0;
+//        dp[0][1] = -prices[0];
 
     }
 }
