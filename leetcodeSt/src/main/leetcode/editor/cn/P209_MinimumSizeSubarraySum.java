@@ -70,6 +70,7 @@ class Solution {
                 left++;
             }
         }
+        // 如果result的值一直没变，则说明target的值大于数组的元素和，此时需返回result值为0
     return result == Integer.MAX_VALUE ? 0:result;
     }
 }
