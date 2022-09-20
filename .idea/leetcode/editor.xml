@@ -168,6 +168,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/P54_SpiralMatrix.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/doc/content/P54_SpiralMatrix.md" />
+              <option name="frontendQuestionId" value="leetcode.cn54" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/P54_SpiralMatrix.java" />
+              <option name="titleSlug" value="spiral-matrix" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/P559_MaximumDepthOfNAryTree.java">
           <value>
             <LeetcodeEditor>
@@ -187,6 +198,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/P55_JumpGame.java" />
               <option name="titleSlug" value="jump-game" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/P59_SpiralMatrixIi.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/doc/content/P59_SpiralMatrixIi.md" />
+              <option name="frontendQuestionId" value="leetcode.cn59" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/P59_SpiralMatrixIi.java" />
+              <option name="titleSlug" value="spiral-matrix-ii" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -286,6 +308,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/PrintBinaryTree.java" />
               <option name="titleSlug" value="print-binary-tree" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/P剑指 Offer 29_ShunShiZhenDaYinJuZhenLcof.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/doc/content/P剑指 Offer 29_ShunShiZhenDaYinJuZhenLcof.md" />
+              <option name="frontendQuestionId" value="leetcode.cn剑指 Offer 29" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/P剑指 Offer 29_ShunShiZhenDaYinJuZhenLcof.java" />
+              <option name="titleSlug" value="shun-shi-zhen-da-yin-ju-zhen-lcof" />
             </LeetcodeEditor>
           </value>
         </entry>
