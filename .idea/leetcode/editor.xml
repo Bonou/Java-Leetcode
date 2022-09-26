@@ -113,6 +113,28 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/P1_TwoSum.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/doc/content/P1_TwoSum.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/P1_TwoSum.java" />
+              <option name="titleSlug" value="two-sum" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/P202_HappyNumber.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/doc/content/P202_HappyNumber.md" />
+              <option name="frontendQuestionId" value="leetcode.cn202" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/P202_HappyNumber.java" />
+              <option name="titleSlug" value="happy-number" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/P203_RemoveLinkedListElements.java">
           <value>
             <LeetcodeEditor>
@@ -435,10 +457,10 @@
         <entry key="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/TwoSum.java">
           <value>
             <LeetcodeEditor>
-              <option name="contentPath" value="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/doc/content/TwoSum.md" />
+              <option name="contentPath" value="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/doc/content/P1_TwoSum.md" />
               <option name="frontendQuestionId" value="leetcode.cn1" />
               <option name="host" value="leetcode.cn" />
-              <option name="path" value="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/TwoSum.java" />
+              <option name="path" value="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/P1_TwoSum.java" />
               <option name="titleSlug" value="two-sum" />
             </LeetcodeEditor>
           </value>
