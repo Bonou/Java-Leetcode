@@ -34,22 +34,35 @@ public class P剑指 Offer 06CongWeiDaoTouDaYinLianBiaoLcof{
  */
 class Solution {
     public int[] reversePrint(ListNode head) {
-        if(head == null){
-            return new int[0];
-        }
+//        if(head == null){
+//            return new int[0];
+//        }
+//        ListNode temp = head;
+//        int len =0;
+//        while(head != null){
+//            len++;
+//            head = head.next;
+//        }
+//        int[] res = new int[len];
+//        while(temp != null){
+//            res[len - 1] = temp.val;
+//            temp = temp.next;
+//            len--;
+//        }
+//        return res;
+        // 用栈
+        Stack<ListNode> stack = new Stack<>();
         ListNode temp = head;
-        int len =0;
-        while(head != null){
-            len++;
-            head = head.next;
-        }
-        int[] res = new int[len];
         while(temp != null){
-            res[len - 1] = temp.val;
+            stack.push(temp);
             temp = temp.next;
-            len--;
         }
-        return res;
+        int size = stack.size();
+        int[] result = new int[size];
+        for(int i = 0; i < size; i++){
+            result[i] = stack.pop().val;
+        }
+        return result;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
