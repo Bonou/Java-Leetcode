@@ -50,17 +50,43 @@ public class P剑指 Offer 07ZhongJianErChaShuLcof{
  * }
  */
 class Solution {
+
     public TreeNode buildTree(int[] preorder, int[] inorder) {
-        int len = preorder.length;
-        int index;      // 头节点的位置
-        int inoStart;   // inoStart为中序遍历的起点
-        int lenLeft = index - inoStart;
-        // 递归
-        if(preorer == null || inorder == null){
+//        int len = preorder.length;
+//        int index;      // 头节点的位置
+//        int inoStart;   // inoStart为中序遍历的起点
+//        int lenLeft = index - inoStart;
+//        // 递归
+//        if(preorer == null || inorder == null){
+//            return null;
+//        }
+//        return reTree();
+        return build(preorder, inorder, 0, preorder.length - 1, 0, inorder.length - 1);
+
+
+    }
+     TreeNode build(int[] preorder, int[] inorder, int preStart, int preEnd, int inoStart, int inoEnd){
+        if(preStart > preEnd || inoStart > inoEnd){
             return null;
         }
-        return reTree();
+        // 树的根节点
+        int val = preorder[preStart];
+        TreeNode root = new TreeNode(val);
+        // 查找根节点在中序遍历的位置
+        int index = 0;
+        for(int i = inoStart; i <= inoEnd; i++){
+            if(inorder[i] == val){
+                index = i;
+                break;
+            }
+        }
 
+        // 计算左子树在数组的长度
+        int leftSize = index -inoStart;
+        // 构建递归
+        root.left = build(preorder, inorder, preStart + 1, preStart + leftSize, inoStart, index - 1);
+        root.right = build(preorder, inorder, preStart + leftSize + 1, preEnd, index + 1, inoEnd);
+        return root;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
