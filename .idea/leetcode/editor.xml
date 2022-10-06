@@ -597,6 +597,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/P面试题13_JiQiRenDeYunDongFanWeiLcof.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/doc/content/P面试题13_JiQiRenDeYunDongFanWeiLcof.md" />
+              <option name="frontendQuestionId" value="leetcode.cn面试题13" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/P面试题13_JiQiRenDeYunDongFanWeiLcof.java" />
+              <option name="titleSlug" value="ji-qi-ren-de-yun-dong-fan-wei-lcof" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcodeSt/src/main/leetcode/editor/cn/TransformToChessboard.java">
           <value>
             <LeetcodeEditor>
