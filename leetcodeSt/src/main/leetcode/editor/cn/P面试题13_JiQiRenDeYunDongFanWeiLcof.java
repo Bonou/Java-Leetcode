@@ -36,7 +36,42 @@ public class P面试题13JiQiRenDeYunDongFanWeiLcof{
     //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int movingCount(int m, int n, int k) {
-
+        // 可简化为只向下或向右搜索
+        if(k == 0){
+            return 1;
+        }
+        Queue<int[]> queue = new LinkedList<int[]>();
+        int[] dx = {0, 1};
+        int[] dy = {1, 0};
+        boolean[][] visit = new boolean[m][n];  // 记录是否走过该格子
+        queue.offer(new int[]{0,0});
+        visit[0][0] = true;
+        int count = 1;  // 能够到达的格子数量
+        while(!queue.isEmpty()){
+            int[] cell = queue.poll();
+            int x = cell[0], y = cell[1];
+            for(int i = 0; i < 2; i++){
+                int tx = x + dx[i];
+                int ty = y + dy[i];
+                // 如果超出范围、该格子访问过 或者 数位之和大于k，则跳过该次循环
+                if(tx < 0 || ty < 0 || tx >= m || ty >= n || visit[tx][ty] || getSum(tx) + getSum(ty) > k){
+                    continue;
+                }
+                queue.offer(new int[]{tx, ty});
+                visit[tx][ty] = true;
+                count++;
+            }
+        }
+        return count;
+    }
+    private int getSum(int x){
+        int res = 0;
+//        res = x / 10 + x % 10;
+        while(x != 0){
+            res += x % 10;
+            x /= 10;
+        }
+        return res;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
