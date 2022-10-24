@@ -32,6 +32,17 @@ public class P剑指 Offer 22LianBiaoZhongDaoShuDiKgeJieDianLcof{
  */
 class Solution {
     public ListNode getKthFromEnd(ListNode head, int k) {
+        // 快慢指针
+        ListNode fast = head;
+        ListNode slow = head;
+        for(int i = 0; i < k; i++){
+            fast = fast.next;
+        }
+        while(fast != null){
+            fast = fast.next;
+            slow = slow.next;
+        }
+        return slow;
 
     }
 }
