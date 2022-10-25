@@ -31,17 +31,34 @@ public class P剑指 Offer 21DiaoZhengShuZuShunXuShiQiShuWeiYuOuShuQianMianLcof{
     //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int[] exchange(int[] nums) {
-        int n = nums.length;
-        int[] ans = new int[n];
-        int left = 0, right = n - 1;
-        for (int num : nums) {
-            if (num % 2 == 0) {
-                ans[right--] = num;
-            } else {
-                ans[left++] = num;
+//        int n = nums.length;
+//        int[] ans = new int[n];
+//        int left = 0, right = n - 1;
+//        for (int num : nums) {
+//            if (num % 2 == 0) {
+//                ans[right--] = num;
+//            } else {
+//                ans[left++] = num;
+//            }
+//        }
+//        return ans;
+        int n =nums.length;
+        int left = 0;
+        int right = n - 1;
+        while(left < right){
+            if(nums[left] % 2 == 0 && nums[right] % 2 == 1){
+                int temp = nums[left];
+                nums[left] = nums[right];
+                nums[right] = temp;
+                left++;
+                right--;
+            }else if(nums[left] % 2 == 1){
+                left++;
+            }else if(nums[right] % 2 == 0){
+                right--;
             }
         }
-        return ans;
+        return nums;
 
 
     }
