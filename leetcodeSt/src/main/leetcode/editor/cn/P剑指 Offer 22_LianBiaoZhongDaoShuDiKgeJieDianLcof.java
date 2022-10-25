@@ -35,8 +35,9 @@ class Solution {
         // 快慢指针
         ListNode fast = head;
         ListNode slow = head;
-        for(int i = 0; i < k; i++){
+       while(fast != null && k > 0){
             fast = fast.next;
+            k--;
         }
         while(fast != null){
             fast = fast.next;
