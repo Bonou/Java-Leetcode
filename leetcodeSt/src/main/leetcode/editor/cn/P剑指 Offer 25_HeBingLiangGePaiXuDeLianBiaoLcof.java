@@ -32,6 +32,30 @@ public class P剑指 Offer 25HeBingLiangGePaiXuDeLianBiaoLcof{
  */
 class Solution {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        ListNode dummy = new ListNode(-1);
+        ListNode pre = dummy;
+        // 取l1、l2共同的长度部分比较大小
+        while(l1 != null && l2 != null){
+            if(l1.val <= l2.val){
+                pre.next = l1;
+                pre = l1;
+                l1 = l1.next;
+            }else{
+                pre.next = l2;
+                pre = l2;
+                l2 = l2.next;
+            }
+
+        }
+        // 剩下l1的部分
+        if(l1 != null){
+            pre.next = l1;
+        }
+        // 剩下l2的部分
+        if(l2 != null){
+            pre.next = l2;
+        }
+        return dummy.next;
 
     }
 }
